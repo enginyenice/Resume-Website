@@ -1,0 +1,69 @@
+﻿@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="publisher" content="V1.0.0" />
+	<meta name="reply-to" content="enginyenice2626@gmail.com" />
+	<meta name="keywords" content="engin, yenice,backend, developer, csharp, dotnet, asp" />
+	<meta name="robots" content="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="Engin Yenice | Backend Developer - Interested in clean code and better problem‑solving. Using especially C# and Asp.Net & Core technologies." />
+	<meta name="author" content="Engin Yenice" />
+	<title>Engin Yenice | Backend Developer</title>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+
+
+
+
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+	<!-- Font Awesome icons (free version)-->
+	<link href="/font-awesome/css/all.min.css" />
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+	<!-- Navigation-->
+	@await  Component.InvokeAsync("NavbarComponent")
+
+	<!-- Page Content-->
+	<div class="container-fluid p-0">
+		<!-- About-->
+		@await  Component.InvokeAsync("AboutComponent")
+		<hr class="m-0" />
+		<!-- Experience-->
+		@await  Component.InvokeAsync("ExperienceComponent")
+		<hr class="m-0" />
+		<!-- Education-->
+		@await Component.InvokeAsync("EducationComponent")
+		<hr class="m-0" />
+		<!-- Skills-->
+		@await Component.InvokeAsync("SkillComponent")
+		<hr class="m-0" />
+		<!-- Interests-->
+		@await Component.InvokeAsync("InterestComponent")
+		<hr class="m-0" />
+		<!-- Certification-->
+		@await Component.InvokeAsync("CertificationComponent")
+	</div>
+	<!-- Bootstrap core JS-->
+	<script src="/jquery/jquery.min.js"></script>
+	<script src="/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/font-awesome/js/all.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="/js/scripts.js"></script>
+	<script src="/js/log.js"></script>
+	<script async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7179063936302886"
+			crossorigin="anonymous"></script>
+</body>
+</html>

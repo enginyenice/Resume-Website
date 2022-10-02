@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@5.2.1",
+      "destination": "wwwroot/twitter-bootstrap/",
+      "files": [
+        "js/bootstrap.min.js",
+        "css/bootstrap.min.css",
+        "css/bootstrap.min.css.map",
+        "js/bootstrap.min.js.map",
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap.bundle.min.js.map"
+      ]
+    },
+    {
+      "library": "jquery@3.6.1",
+      "destination": "wwwroot/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "library": "font-awesome@6.2.0",
+      "destination": "wwwroot/font-awesome/"
+    }
+  ]
+}

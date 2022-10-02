@@ -1,0 +1,55 @@
+﻿@model List<EducationListDto>
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="mb-2">
+	<a asp-action="Add"
+	   asp-controller="Education"
+	   asp-area="Admin"
+	   class="btn btn-success btn-sm">
+		Yeni Kayıt
+	</a>
+</div>
+<table class="table table-hover table-striped table-bordered table-sm">
+
+	<thead>
+		<tr>
+			<th>Eğitim Aldığı Kurum</th>
+			<th>Eğitim Alanı</th>
+			<th>Başlangıç Tarihi</th>
+			<th>Bitiş Tarihi</th>
+			<th>Derecesi</th>
+			<th>İşlem</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Title</td>
+				<td>@item.SubTitle</td>
+				<td>@item.StartDate</td>
+				<td>@item.EndDate</td>
+				<td>@item.Description</td>
+				<td>
+					<a asp-action="Update"
+				   asp-controller="Education"
+				   asp-area="Admin"
+				   asp-route-id="@item.Id"
+				   class="btn btn-warning btn-sm mr-1">
+						Güncelle
+					</a>
+
+					<a asp-action="Delete"
+				   asp-controller="Education"
+				   asp-area="Admin"
+				   asp-route-id="@item.Id"
+				   onclick="return confirm('Silmek istediğinizden emin misiniz?')"
+				   class="btn btn-danger btn-sm">
+						Sil
+					</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

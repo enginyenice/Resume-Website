@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\admin-styles.css" />
+    <Content Remove="wwwroot\js\admin-scripts.js" />
+    <Content Remove="wwwroot\js\scripts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AdminTheme\startbootstrap-simple-sidebar-gh-pages\assets\favicon.ico" />
+    <None Include="wwwroot\AdminTheme\startbootstrap-simple-sidebar-gh-pages\css\styles.css" />
+    <None Include="wwwroot\AdminTheme\startbootstrap-simple-sidebar-gh-pages\index.html" />
+    <None Include="wwwroot\AdminTheme\startbootstrap-simple-sidebar-gh-pages\js\scripts.js" />
+    <None Include="wwwroot\ClientTheme\startbootstrap-resume-gh-pages\js\scripts.js" />
+    <None Include="wwwroot\css\admin-styles.css" />
+    <None Include="wwwroot\js\admin-scripts.js" />
+    <None Include="wwwroot\js\scripts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

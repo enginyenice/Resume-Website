@@ -1,0 +1,48 @@
+﻿@model List<SkillListDto>
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="mb-2">
+	<a asp-action="Add"
+	   asp-controller="Skill"
+	   asp-area="Admin"
+	   class="btn btn-success btn-sm">
+		Yeni Kayıt
+	</a>
+</div>
+<table class="table table-hover table-striped table-bordered table-sm">
+	
+	<thead>
+	<tr>
+		<th>Yetenek Bilgisi</th>
+		<th>İşlem</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.Description</td>
+			<td>
+				<a
+					asp-action="Update"
+					asp-controller="Skill"
+					asp-area="Admin"
+					asp-route-id="@item.Id"
+					class="btn btn-warning btn-sm mr-1">
+					Güncelle
+				</a>
+			
+				<a asp-action="Delete"
+				   asp-controller="Skill"
+				   asp-area="Admin"
+				   asp-route-id="@item.Id"
+				   onclick="return confirm('Silmek istediğinizden emin misiniz?')"
+				   class="btn btn-danger btn-sm">
+					Sil
+				</a>
+			</td>
+		</tr>
+	}
+	</tbody>
+</table>

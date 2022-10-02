@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\EducationDtos\" />
+    <Folder Include="DTOs\ExperienceDtos\" />
+    <Folder Include="DTOs\InterestDtos\" />
+    <Folder Include="DTOs\SkillDtos\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿@model CertificationUpdateDto
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Update" method="post">
+	<input type="hidden" asp-for="@Model.Id"/>
+	<div class="form-group">
+		<label>Sertifika Bilgisi</label>
+		<textarea asp-for="@Model.Description" class="form-control"></textarea>
+		<span class="text-danger" asp-validation-for="@Model.Description"></span>
+	</div>
+
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-success">Kaydet</button>
+	</div>
+
+
+
+</form>

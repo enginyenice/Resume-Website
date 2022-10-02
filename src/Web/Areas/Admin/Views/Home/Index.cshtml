@@ -1,0 +1,60 @@
+﻿@model AppUserUpdateModel
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<form asp-action="Index" method="post" enctype="multipart/form-data">
+	<input type="hidden" asp-for="@Model.Id"/>
+	<div class="form-group">
+		<label>Adınız</label>
+		<input asp-for="FirstName" class="form-control"/>
+		<span class="text-danger" asp-validation-for="FirstName"></span>
+	</div>
+	<div class="form-group">
+		<label>Soyadınız</label>
+		<input asp-for="LastName" class="form-control"/>
+		<span class="text-danger" asp-validation-for="LastName"></span>
+	</div>
+
+	<div class="form-group">
+		<label>Address</label>
+		<input asp-for="Address" class="form-control"/>
+		<span class="text-danger" asp-validation-for="Address"></span>
+	</div>
+
+	<div class="form-group">
+		<label>Email</label>
+		<input asp-for="Email" class="form-control"/>
+		<span class="text-danger" asp-validation-for="Email"></span>
+	</div>
+
+	<div class="form-group">
+		<label>ShortDescription</label>
+		<textarea asp-for="ShortDescription" class="form-control"></textarea>
+		<span class="text-danger" asp-validation-for="ShortDescription"></span>
+	</div>
+
+	<div class="form-group row">
+		<div class="col col-md-6">
+			@if (!string.IsNullOrWhiteSpace(@Model.ImageUrl))
+			{
+				<p>Bir önceki resminiz</p>
+				<img class="rounded " style="width: 200px; height: 200px;" src="/img/@Model.ImageUrl" alt="@Model.ImageUrl"/>
+			}
+			else
+			{
+				<div class="alert-light">Resim yok</div>
+			}
+		</div>
+		<div class="col col-md-6">
+			<label>Resim Seç</label>
+			<input type="file" class="form-control form-control-file" asp-for="@Model.Picture"/>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-success">Kaydet</button>
+	</div>
+
+
+
+</form>
